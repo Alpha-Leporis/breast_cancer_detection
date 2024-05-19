@@ -48,7 +48,7 @@ $ pip install -r requirements.txt
 ```
 
 ### 3. Download the Dataset
-Download the Breast Ultrasound Images Dataset from Kaggle here.
+Download the Breast Ultrasound Images Dataset from Kaggle [here](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset).
 
 Extract the dataset into the data/raw directory.
 
@@ -64,18 +64,6 @@ Run the main script to train the Vision Transformer model.
 $ python run.py
 ```
 
-### 6. Explore the Data (Optional)
-You can explore the dataset using the provided Jupyter notebook.
-```bash
-$ jupyter notebook notebooks/data_exploration.ipynb
-```
-
-### 7. Train the Model Interactively (Optional)
-You can also train the model interactively using the provided Jupyter notebook.
-```bash
-$ jupyter notebook notebooks/model_training.ipynb
-```
-
 # File Descriptions
 #### `data/`
 * raw/: Contains the original dataset files as downloaded.
@@ -89,17 +77,9 @@ Contains all the Python scripts necessary for data processing, model definition,
 * model.py: Script to define and initialize the Vision Transformer model.
 * train.py: Script to handle the training process of the model.
 * evaluate.py: Script to evaluate the trained model on the validation set.
-#### `notebooks/`
-Contains Jupyter notebooks for interactive data exploration and model training.
-
-* `data_exploration.ipynb`: Notebook for visualizing and understanding the dataset.
-* `model_training.ipynb`: Notebook for experimenting with model training.
 
 #### `requirements.txt`
 A list of required Python packages.
-
-#### `README.md`
-Provides an overview of the project, setup instructions, and usage details.
 
 #### `run.py`
 A main script to run the complete training and evaluation pipeline.

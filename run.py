@@ -16,8 +16,7 @@ if __name__ == "__main__":
 
     # Train the model
     num_epochs = 10
-    for epoch in range(num_epochs):
-        train_model(model, train_loader, val_loader, criterion, optimizer, device, num_epochs)
+    train_model(model, train_loader, val_loader, criterion, optimizer, device, num_epochs)
 
     # Ensure the models directory exists
     models_dir = 'models'
