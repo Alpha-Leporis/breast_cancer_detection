@@ -1,3 +1,4 @@
+import os
 import torch
 from src.dataset import get_data_loaders
 from src.model import get_vit_model
@@ -16,9 +17,13 @@ if __name__ == "__main__":
     # Train the model
     num_epochs = 10
     for epoch in range(num_epochs):
-        train_model(model, train_loader, val_loader, criterion, optimizer, device, num_epochs=1)
-        
-    # Save the last model
-    model_path = 'vit_breast_cancer_last.pth'
+        train_model(model, train_loader, val_loader, criterion, optimizer, device, num_epochs)
+
+    # Ensure the models directory exists
+    models_dir = 'models'
+    os.makedirs(models_dir, exist_ok=True)
+
+    # Save the last model in the models directory
+    model_path = os.path.join(models_dir, 'vit_breast_cancer_last.pth')
     torch.save(model.state_dict(), model_path)
     print(f'Last model saved to {model_path}')

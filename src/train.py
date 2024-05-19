@@ -5,7 +5,7 @@ from src.model import get_vit_model
 from src.evaluate import validate_model
 import torch.nn as nn
 
-def train_model(model, train_loader, val_loader, criterion, optimizer, device, num_epochs=10):
+def train_model(model, train_loader, val_loader, criterion, optimizer, device, num_epochs):
     model.to(device)
 
     for epoch in range(num_epochs):
