@@ -27,8 +27,7 @@ breast_cancer_detection/
 │ ├── train.py
 │ ├── evaluate.py
 ├── notebooks/
-│ ├── data_exploration.ipynb
-│ ├── model_training.ipynb
+│ ├── breast_cancer_detection.ipynb
 ├── requirements.txt
 ├── README.md
 └── run.py
@@ -83,6 +82,9 @@ A list of required Python packages.
 
 #### `run.py`
 A main script to run the complete training and evaluation pipeline.
+
+#### `predict.py`
+A script to run prediction on images.
 
 # Acknowledgements
 The dataset used in this project is provided by [Arya Shah](https://www.kaggle.com/aryashah2k) on [Kaggle](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset).
