@@ -13,4 +13,12 @@ if __name__ == "__main__":
     optimizer = optim.Adam(model.parameters(), lr=1e-4)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-    train_model(model, train_loader, val_loader, criterion, optimizer, device, num_epochs=10)
+    # Train the model
+    num_epochs = 10
+    for epoch in range(num_epochs):
+        train_model(model, train_loader, val_loader, criterion, optimizer, device, num_epochs=1)
+        
+    # Save the last model
+    model_path = 'vit_breast_cancer_last.pth'
+    torch.save(model.state_dict(), model_path)
+    print(f'Last model saved to {model_path}')

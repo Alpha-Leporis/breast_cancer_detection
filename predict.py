@@ -14,7 +14,7 @@ transform = transforms.Compose([
 ])
 
 # Load and preprocess the input image
-image_path = 'path/to/your/image.jpg'
+image_path = 'data/raw/benign/benign (1).png' # 'path/to/your/image.jpg'
 image = Image.open(image_path)
 image = transform(image).unsqueeze(0)  # Add batch dimension
 
