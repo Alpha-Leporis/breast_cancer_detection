@@ -84,7 +84,7 @@ A list of required Python packages.
 A main script to run the complete training and evaluation pipeline.
 
 #### `predict.py`
-A script to run prediction on images.
+A script to load the trained model, preprocess the input image, make predictions, and print the predicted class.
 
 # Acknowledgements
 The dataset used in this project is provided by [Arya Shah](https://www.kaggle.com/aryashah2k) on [Kaggle](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset).
