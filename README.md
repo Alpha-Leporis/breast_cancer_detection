@@ -1,0 +1,108 @@
+# Breast Cancer Detection Using Vision Transformer
+
+This project uses a Vision Transformer (ViT) model to detect breast cancer from ultrasound images. The dataset is sourced from Kaggle and includes three categories: benign, malignant, and normal.
+
+## Project Directory Structure
+```
+breast_cancer_detection/
+├── data/
+│ ├── raw/
+│ │ ├── benign/
+│ │ ├── malignant/
+│ │ ├── normal/
+│ ├── processed/
+│ ├── train/
+│ │ ├── benign/
+│ │ ├── malignant/
+│ │ ├── normal/
+│ ├── val/
+│ ├── benign/
+│ ├── malignant/
+│ ├── normal/
+├── src/
+│ ├── init.py
+│ ├── data_preprocessing.py
+│ ├── dataset.py
+│ ├── model.py
+│ ├── train.py
+│ ├── evaluate.py
+├── notebooks/
+│ ├── data_exploration.ipynb
+│ ├── model_training.ipynb
+├── requirements.txt
+├── README.md
+└── run.py
+```
+## Setup Instructions
+### 1. Clone the Repository
+
+```bash
+$ git clone https://github.com/yourusername/breast_cancer_detection.git
+$ cd breast_cancer_detection
+```
+
+### 2. Install Required Packages
+Ensure you have Python 3.8 or higher installed. Install the required packages using:
+```bash
+$ pip install -r requirements.txt
+```
+
+### 3. Download the Dataset
+Download the Breast Ultrasound Images Dataset from Kaggle here.
+
+Extract the dataset into the data/raw directory.
+
+### 4. Preprocess the Data
+Run the data preprocessing script to organize the dataset into training and validation sets.
+```bash
+$ python src/data_preprocessing.py
+```
+
+### 5. Train the Model
+Run the main script to train the Vision Transformer model.
+```bash
+$ python run.py
+```
+
+### 6. Explore the Data (Optional)
+You can explore the dataset using the provided Jupyter notebook.
+```bash
+$ jupyter notebook notebooks/data_exploration.ipynb
+```
+
+### 7. Train the Model Interactively (Optional)
+You can also train the model interactively using the provided Jupyter notebook.
+```bash
+$ jupyter notebook notebooks/model_training.ipynb
+```
+
+# File Descriptions
+#### `data/`
+* raw/: Contains the original dataset files as downloaded.
+* processed/: Contains the organized dataset ready for training and validation, split into train and val directories.
+
+#### `src/`
+Contains all the Python scripts necessary for data processing, model definition, training, and evaluation.
+
+* data_preprocessing.py : Script to preprocess and organize the dataset into the required directory structure.
+* dataset.py: Script to handle data loading and transformations using PyTorch's DataLoader.
+* model.py: Script to define and initialize the Vision Transformer model.
+* train.py: Script to handle the training process of the model.
+* evaluate.py: Script to evaluate the trained model on the validation set.
+#### `notebooks/`
+Contains Jupyter notebooks for interactive data exploration and model training.
+
+* `data_exploration.ipynb`: Notebook for visualizing and understanding the dataset.
+* `model_training.ipynb`: Notebook for experimenting with model training.
+
+#### `requirements.txt`
+A list of required Python packages.
+
+#### `README.md`
+Provides an overview of the project, setup instructions, and usage details.
+
+#### `run.py`
+A main script to run the complete training and evaluation pipeline.
+
+# Acknowledgements
+The dataset used in this project is provided by [Arya Shah](https://www.kaggle.com/aryashah2k) on [Kaggle](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset).
