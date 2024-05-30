@@ -36,7 +36,7 @@ breast_cancer_detection/
 ### 1. Clone the Repository
 
 ```bash
-$ git clone https://github.com/yourusername/breast_cancer_detection.git
+$ git clone https://github.com/Alpha-Leporis/breast_cancer_detection.git
 $ cd breast_cancer_detection
 ```
 
